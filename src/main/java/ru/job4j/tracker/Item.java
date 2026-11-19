@@ -8,17 +8,17 @@ public class Item {
     private LocalDateTime created;
 
     public Item() {
-        this(0, null);
+        this(0, null, LocalDateTime.now());
     }
 
     public Item(String name) {
-        this(0, name);
+        this(0, name, LocalDateTime.now());
     }
 
-    public Item(int id, String name) {
+    public Item(int id, String name, LocalDateTime time) {
         this.id = id;
         this.name = name;
-        this.created = LocalDateTime.now();
+        this.created = time;
     }
 
     public int getId() {
